@@ -251,7 +251,7 @@
     "semver": "7.3.2",
     "send": "0.17.1",
     "setimmediate": "1.0.5",
-    "source-map": "0.6.1",
+    "source-map": "0.8.0-beta.0",
     "stream-browserify": "3.0.0",
     "stream-http": "3.1.1",
     "string-hash": "1.1.3",
