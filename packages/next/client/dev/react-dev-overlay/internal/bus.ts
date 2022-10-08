@@ -1,4 +1,4 @@
-import { StackFrame } from 'stacktrace-parser'
+import { StackFrame } from 'next/dist/compiled/stacktrace-parser'
 
 export const TYPE_BUILD_OK = 'build-ok'
 export const TYPE_BUILD_ERROR = 'build-error'

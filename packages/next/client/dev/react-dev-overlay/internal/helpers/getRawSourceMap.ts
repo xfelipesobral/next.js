@@ -1,5 +1,7 @@
-import dataUriToBuffer, { MimeBuffer } from 'data-uri-to-buffer'
-import type { RawSourceMap } from 'source-map'
+import dataUriToBuffer, {
+  MimeBuffer,
+} from 'next/dist/compiled/data-uri-to-buffer'
+import type { RawSourceMap } from 'next/dist/compiled/source-map'
 import { getSourceMapUrl } from './getSourceMapUrl'
 
 export function getRawSourceMap(fileContents: string): RawSourceMap | null {

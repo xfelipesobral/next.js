@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { StackFrame } from 'stacktrace-parser'
+import { StackFrame } from 'next/dist/compiled/stacktrace-parser'
 import { CodeFrame } from '../components/CodeFrame'
 import { ReadyRuntimeError } from '../helpers/getErrorByType'
 import { noop as css } from '../helpers/noop-template'

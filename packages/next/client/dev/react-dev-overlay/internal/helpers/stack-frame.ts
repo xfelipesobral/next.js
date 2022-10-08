@@ -1,4 +1,4 @@
-import { StackFrame } from 'stacktrace-parser'
+import { StackFrame } from 'next/dist/compiled/stacktrace-parser'
 import { OriginalStackFrameResponse } from '../../middleware'
 
 export type OriginalStackFrame =

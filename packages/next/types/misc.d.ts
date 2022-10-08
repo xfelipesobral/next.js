@@ -264,6 +264,21 @@ declare module 'next/dist/compiled/strip-ansi' {
   import m from 'strip-ansi'
   export = m
 }
+declare module 'next/dist/compiled/anser' {
+  import m from 'anser'
+  export = m
+}
+declare module 'next/dist/compiled/css.escape'
+declare module 'next/dist/compiled/platform'
+declare module 'next/dist/compiled/data-uri-to-buffer' {
+  import m from 'data-uri-to-buffer'
+  export = m
+}
+declare module 'next/dist/compiled/shell-quote'
+declare module 'next/dist/compiled/stacktrace-parser' {
+  import m from 'stacktrace-parser'
+  export = m
+}
 declare module 'next/dist/compiled/@vercel/nft' {
   import m from '@vercel/nft'
   export = m

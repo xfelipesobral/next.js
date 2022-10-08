@@ -319,6 +319,28 @@ export async function ncc_edge_runtime(task, opts) {
   )
 }
 
+const reactDevOverlayDependencies = [
+  'anser',
+  'css.escape',
+  'data-uri-to-buffer',
+  'platform',
+  'shell-quote',
+  'stacktrace-parser',
+  'strip-ansi',
+]
+for (const dep of reactDevOverlayDependencies) {
+  externals[dep] = `next/dist/compiled/${dep}`
+}
+// eslint-disable-next-line camelcase
+export async function ncc_react_dev_overlay_deps(task, opts) {
+  for (const dep of reactDevOverlayDependencies) {
+    await task
+      .source(opts.src || relative(__dirname, require.resolve(dep)))
+      .ncc({ externals, packageName: dep, target: 'es5', externals })
+      .target(`compiled/${dep}`)
+  }
+}
+
 // eslint-disable-next-line camelcase
 export async function ncc_next__react_dev_overlay(task, opts) {
   const overlayExternals = {
@@ -1925,6 +1947,7 @@ export async function ncc(task, opts) {
         'ncc_semver',
         'ncc_send',
         'ncc_source_map',
+        'ncc_react_dev_overlay_deps',
         'ncc_string_hash',
         'ncc_strip_ansi',
         'ncc_nft',
